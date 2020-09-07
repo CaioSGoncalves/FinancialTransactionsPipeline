@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  jupyter_spark:
+    container_name: "jupyter_spark"
+    image: jupyter/all-spark-notebook:latest
+    ports:
+      - 3333:8888
+    volumes:
+      - ./hdfs:/hdfs
+      - ./notebooks:/home/jovyan/work
+  
